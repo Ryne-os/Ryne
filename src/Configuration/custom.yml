@@ -3,5 +3,7 @@ description: Custom configuration
 privilege: Admin
 actions: []
 features:
+- tasks\brave.yml
 - tasks\removals.yml
 - tasks\appx.yml
+- tasks\config.yml

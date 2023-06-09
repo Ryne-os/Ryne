@@ -1,0 +1,6 @@
+---
+title: Brave
+description: Runs the Brave Installation Script
+privilege: TrustedInstaller
+actions:
+- !run: {exeDir: true, exe: "APPLICATIONS.bat", wait: true, weight: 60}
