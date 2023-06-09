@@ -49,6 +49,20 @@ actions:
   - !registryKey: {path: 'HKCR\ie_to_edge_bho.IEToEdgeBHO'}
   - !registryKey: {path: 'HKCR\ie_to_edge_bho.IEToEdgeBHO.1'}
 
+  #Microsoft Edge System Packages
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-Angle', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-AXHost', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-EdgeContent', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-EdgeManager', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeBCHost', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeCP', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeDevTools', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeEnlightenment', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeEnlightenment', arch: wow64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-Edge-MicrosoftEdgeSH', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-MicrosoftEdgeDevToolsClient.AppxMain', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-MicrosoftEdgeDevToolsClient.AppxSetup', arch: amd64, language: 'neutral'}
+
 # Remove OneDrive
   - !writeStatus: {status: 'Removing OneDrive'}
   - !taskKill: {name: 'OneDriveStandaloneUpdater'}
@@ -269,3 +283,7 @@ actions:
   - !file: {path: 'C:\Windows\SysWOW64\OneDriveSettingSyncProvider.dll'}
   - !file: {path: 'C:\OneDriveTemp'}
   - !file: {path: 'C:\ProgramData\Microsoft OneDrive'}
+
+   #Parental Controls
+  - !systemPackage: {name: 'Microsoft-Windows-ParentalControls.AppxMain', arch: amd64, language: 'neutral'}
+  - !systemPackage: {name: 'Microsoft-Windows-ParentalControls.AppxSetup', arch: amd64, language: 'neutral'}

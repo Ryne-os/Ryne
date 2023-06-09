@@ -4,4 +4,4 @@ privilege: Admin
 actions: []
 features:
 - tasks\removals.yml
-- tasks\theme.yml
+- tasks\appx.yml

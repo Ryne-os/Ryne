@@ -1,3 +1,10 @@
+---
+title: theme
+description: Applies Theme
+privilege: TrustedInstaller
+actions:
+  - !writeStatus: {status: 'Configuring system'}
+
  # Configure visual effect settings
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects'
