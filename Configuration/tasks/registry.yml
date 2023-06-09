@@ -1,0 +1,18 @@
+---
+title: Registry Edits
+description: Performs registry edits
+privilege: TrustedInstaller
+actions:
+
+    # Remove SecurityHealth from startup
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run', value: 'SecurityHealth', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run', value: 'SecurityHealth', operation: delete}
+  -
+    # Disables SmartScreen
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer', value: 'SmartScreenEnabled', type: REG_SZ, data: 'Off'}
+  -
+    # Disable Windows Error Reporting
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting', value: 'Disabled', type:  REG_DWORD, data: '1'}
+  -
+    # Disable Users On Login Screen
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'dontdisplaylastusername', type: REG_DWORD, data: '1'}

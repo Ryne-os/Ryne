@@ -1,0 +1,9 @@
+title: Custom
+description: Custom configuration
+privilege: Admin
+actions: []
+features:
+- tasks\registry.yml
+- tasks\services.yml
+- tasks\appx.yml
+- tasks\software.yml
