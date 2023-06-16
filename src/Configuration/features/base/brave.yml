@@ -3,6 +3,4 @@ title: Brave
 description: Installs Brave Browser
 privilege: TrustedInstaller
 actions:
-
-- !writeStatus: {status: 'Installing Brave Browser'}
-  - !run: {exeDir: true, exe: "BRAVE.bat", wait: true, weight: 60}
+- !run: {exeDir: true, exe: "BRAVE.bat", wait: true, weight: 60}
