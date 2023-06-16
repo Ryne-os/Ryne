@@ -1,9 +1,14 @@
+---
 title: Custom
-description: Custom configuration
+description: Custom AME configuration
 privilege: Admin
 actions: []
 features:
-- tasks\brave.yml
-- tasks\removals.yml
-- tasks\appx.yml
-- tasks\config.yml
+- features\base\regedits.yml
+#- features\base\dotnet.yml
+- features\base\appx.yml
+- features\base\services.yml
+- features\base\components.yml
+- features\base\files.yml
+- features\base\config.yml
+- features\base\software.yml
