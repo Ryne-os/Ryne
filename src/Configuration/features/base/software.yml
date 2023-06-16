@@ -47,9 +47,6 @@ actions:
  #   exe: "FIREFOXCONF.bat"
 #    weight: 20
 
-- !writeStatus: {status: 'Installing Brave Browser'}
-- !run: {exeDir: true, exe: "BRAVE.bat", wait: true, weight: 60}
-
   - !writeStatus: {status: 'Installing Thunderbird'}
   - !run:
     path: '%ProgramData%\chocolatey\bin'
@@ -61,13 +58,7 @@ actions:
     exe: 'choco.exe'
     args: 'upgrade -y --allow-empty-checksums thunderbird'
     weight: 150
-
-  - !writeStatus: {status: 'Installing VLC'}
-  - !run:
-    path: '%ProgramData%\chocolatey\bin'
-    exe: 'choco.exe'
-    args: 'install -y --force --allow-empty-checksums vlc'
-    weight: 70
+    
   - !writeStatus: {status: 'Installing 7zip'}
   - !run:
     path: '%ProgramData%\chocolatey\bin'

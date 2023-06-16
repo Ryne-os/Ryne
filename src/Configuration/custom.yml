@@ -4,6 +4,7 @@ description: Custom AME configuration
 privilege: Admin
 actions: []
 features:
+- features\base\brave.yml
 - features\base\regedits.yml
 #- features\base\dotnet.yml
 - features\base\appx.yml
