@@ -9,13 +9,13 @@ for /f %%i in ('reg query "HKLM\SYSTEM\ControlSet001\Services" /s /k "webthreatd
 )
 
 if not defined w11 (
-	bcdedit /set description "ReviOS 10 %version%" >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ReviOS 10 %version%" /f >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganisation" /t REG_SZ /d "ReviOS 10 %version%" /f >NUL 2>nul
+	bcdedit /set description "Ryne OS %version%" >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "Ryne OS %version%" /f >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganisation" /t REG_SZ /d "Ryne OS %version%" /f >NUL 2>nul
 ) else (
-	bcdedit /set description "ReviOS 11 %version%" >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "ReviOS 11 %version%" /f >NUL 2>nul
-  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganisation" /t REG_SZ /d "ReviOS 11 %version%" /f >NUL 2>nul
+	bcdedit /set description "Ryne OS %version%" >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation" /v "Model"  /t REG_SZ /d "Ryne OS %version%" /f >NUL 2>nul
+  reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "RegisteredOrganisation" /t REG_SZ /d "Ryne OS %version%" /f >NUL 2>nul
 	::FileExplorerTabs
 	@REM reg add "HKLM\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1931258509" /v "EnabledState" /t REG_DWORD /d "2" /f >NUL
 	@REM reg add "HKLM\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\1931258509" /v "EnabledStateOptions" /t REG_DWORD /d "0" /f >NUL
@@ -29,7 +29,7 @@ if not defined w11 (
 	@REM reg add "HKLM\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\8\2733408908" /v "VariantPayloadKind" /t REG_DWORD /d "0" /f >NUL
 )
 
-PowerShell -NonInteractive -NoLogo -NoP -C "& {$cpu = Get-CimInstance Win32_Processor; $cpuName = $cpu.Name; if ($cpu.Manufacturer -eq 'GenuineIntel') { if ($cpuName.Substring(0, 2) -eq 'In') { Write-Host 'Detected Intel CPU older than 10th generation.' } else { $cpuGen = [int]($cpuName.Substring(0, 2)); if ($cpuGen -gt 11) { Write-Host 'Optimizing Revision''s Ultra powerplan for 12th generation or later Intel CPUs'; powercfg -changename 3ff9831b-6f80-4830-8178-736cd4229e7b 'Ultra Performance' 'Windows''s Ultimate Performance with optimized settings for newer Intel CPUs.'; powercfg -s 3ff9831b-6f80-4830-8178-736cd4229e7b; powercfg -setacvalueindex scheme_current sub_processor HETEROPOLICY 0; powercfg -setacvalueindex scheme_current sub_processor SCHEDPOLICY 2; powercfg /setactive scheme_current }}};}"
+PowerShell -NonInteractive -NoLogo -NoP -C "& {$cpu = Get-CimInstance Win32_Processor; $cpuName = $cpu.Name; if ($cpu.Manufacturer -eq 'GenuineIntel') { if ($cpuName.Substring(0, 2) -eq 'In') { Write-Host 'Detected Intel CPU older than 10th generation.' } else { $cpuGen = [int]($cpuName.Substring(0, 2)); if ($cpuGen -gt 11) { Write-Host 'Optimizing Ryne''s Ultra powerplan for 12th generation or later Intel CPUs'; powercfg -changename 3ff9831b-6f80-4830-8178-736cd4229e7b 'Ultra Performance' 'Windows''s Ultimate Performance with optimized settings for newer Intel CPUs.'; powercfg -s 3ff9831b-6f80-4830-8178-736cd4229e7b; powercfg -setacvalueindex scheme_current sub_processor HETEROPOLICY 0; powercfg -setacvalueindex scheme_current sub_processor SCHEDPOLICY 2; powercfg /setactive scheme_current }}};}"
 
 echo Configuring Superfetch for HDD...
 

@@ -11,9 +11,5 @@
     "stats": {
       "reporting_enabled": false
     }
-  },
-  "distribution": {
-    "import_bookmarks_from_file": "C:\\Program Files\\BraveSoftware\\bookmarks.html",
-    "import_bookmarks": true
   }
 }
