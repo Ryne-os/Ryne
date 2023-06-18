@@ -53,6 +53,69 @@ actions:
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
   - !registryValue: {path: 'HKCU\Control Panel\International\User Profile', value: 'HttpAcceptLanguageOptOut', type: REG_DWORD, data: '1'}
 
+  # Do not allow themes to changes desktop icons and mouse pointers
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes'
+    value: 'ThemeChangesMousePointers'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes'
+    value: 'ThemeChangesDesktopIcons'
+    data: '0'
+    type: REG_DWORD
+
+    # Disable enhance pointer precision
+  - !registryValue:
+    path: 'HKCU\Control Panel\Mouse'
+    value: 'MouseSpeed'
+    data: '0'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKCU\Control Panel\Mouse'
+    value: 'MouseThreshold1'
+    data: '0'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKCU\Control Panel\Mouse'
+    value: 'MouseThreshold2'
+    data: '0'
+    type: REG_SZ
+
+    # Reduce mouse hover time to 20 milliseconds
+  - !registryValue:
+    path: 'HKCU\Control Panel\Desktop'
+    value: 'MouseHoverTime'
+    data: '20'
+    type: REG_SZ
+
+    # Disable annoying keyboard and mouse features
+  - !registryValue:
+    path: 'HKCU\Control Panel\Accessibility\HighContrast'
+    value: 'Flags'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKCU\Control Panel\Accessibility\Keyboard Response'
+    value: 'Flags'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKCU\Control Panel\Accessibility\MouseKeys'
+    value: 'Flags'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKCU\Control Panel\Accessibility\StickyKeys'
+    value: 'Flags'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKCU\Control Panel\Accessibility\ToggleKeys'
+    value: 'Flags'
+    data: '0'
+    type: REG_DWORD
+
     # Add Task Manager to taskbar right click
   - !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\4\1887869580', value: 'EnabledState', type: REG_DWORD, data: '2'}
   - !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\4\1887869580', value: 'EnabledStateOptions', type: REG_DWORD, data: '0'}
