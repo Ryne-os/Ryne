@@ -1,0 +1,46 @@
+---
+title: Registry
+description: ryne registry configuration
+privilege: TrustedInstaller
+actions: []
+features:
+- features\ryne\registry\ntlite-settings.yml
+- features\ryne\registry\aaa-edit-ISO-version-and-edition.yml
+- features\ryne\registry\add-take-ownership-in-context-menu.yml
+- features\ryne\registry\bypass-requirements.yml
+- features\ryne\registry\configure-crash-control.yml
+- features\ryne\registry\configure-deprovisioned-apps.yml
+- features\ryne\registry\configure-explorer-folder-view.yml
+- features\ryne\registry\configure-explorer-settings.yml
+- features\ryne\registry\configure-ifeo.yml
+- features\ryne\registry\configure-internet-explorer.yml
+- features\ryne\registry\configure-kernel.yml
+- features\ryne\registry\configure-logon.yml
+- features\ryne\registry\configure-microsoft-store.yml
+- features\ryne\registry\configure-multimedia.yml
+- features\ryne\registry\configure-oobe.yml
+- features\ryne\registry\configure-power-control.yml
+- features\ryne\registry\configure-privacy.yml
+- features\ryne\registry\configure-search-and-cortana.yml
+- features\ryne\registry\configure-security.yml
+- features\ryne\registry\configure-start-menu-and-taskbar-notifications).yml
+- features\ryne\registry\configure-win32priorityseparation.yml
+- features\ryne\registry\configure-windows-settings.yml
+- features\ryne\registry\configure-windows-update-and-install.yml
+# - features\ryne\registry\disabe-disk-defragmentation.yml
+- features\ryne\registry\disable-automatic-maintenance.yml
+- features\ryne\registry\disable-disk-checking.yml
+- features\ryne\registry\disable-ease-of-access-features.yml
+- features\ryne\registry\disable-installing-teams.yml
+- features\ryne\registry\disable-logging.yml
+- features\ryne\registry\disable-prefetcher-superfetch-and-readyboost.yml
+- features\ryne\registry\disable-system-restore-pre-defined-config.yml
+# - features\ryne\registry\disable-user-account-control-uac.yml
+- features\ryne\registry\enable-audio-communications-do-nothing.yml
+- features\ryne\registry\fixes.yml
+- features\ryne\registry\make-msi-installer-work-in-safe-mode.yml
+- features\ryne\registry\mouse-tweaks.yml
+- features\ryne\registry\old-rightclick-menu.yml
+- features\ryne\registry\restore-windows-photo-viewer-all-users.yml
+- features\ryne\registry\ryne-static-edition.yml
+- features\ryne\registry\ryne-static-oem-information.yml

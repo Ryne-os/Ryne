@@ -1,15 +1,13 @@
 ---
 title: Custom
-description: Custom AME configuration
+description: Custom ryne configuration
 privilege: Admin
 actions: []
 features:
-#- features\base\brave.yml
-- features\base\regedits.yml
-#- features\base\dotnet.yml
-- features\base\appx.yml
-- features\base\services.yml
-- features\base\components.yml
-- features\base\files.yml
-- features\base\config.yml
-- features\base\software.yml
+- features\ryne\start.yml
+- features\ryne\services.yml
+- features\ryne\appx.yml
+- features\ryne\components.yml
+- features\ryne\packages.yml
+- features\ryne\registry.yml
+- features\ryne\config.yml

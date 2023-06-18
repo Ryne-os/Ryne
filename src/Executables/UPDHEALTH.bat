@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion
+SETLOCAL ENABLEDELAYEDEXPANSION
 
 for /f "usebackq tokens=7 delims=\" %%e in (`reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /d /f "Update Health Tools" /s ^| findstr /i /c:"CurrentVersion\Uninstall\\"`) do set "GUID=%%e"
 for /f "usebackq tokens=4 delims=\" %%e in (`reg query "HKCR\Installer\Products" /d /f "Update Health Tools" /s ^| findstr /i /c:"Installer\Products\\"`) do set "ProdID=%%e"
