@@ -1,1 +1,1 @@
-# Ryne - https://ryneos.com/
+# Ryne - https://ryneos.me
