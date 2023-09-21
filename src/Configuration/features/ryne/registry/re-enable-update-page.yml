@@ -1,0 +1,8 @@
+---
+title: re-enable-update-page
+description: re-enable-update-page
+privilege: TrustedInstaller
+actions:
+
+#re enables update page without encuring parse error
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'SettingsPageVisibility', type: REG_SZ, data: 'hide:cortana;privacy-automaticfiledownloads;privacy-feedback;windowsinsider'}

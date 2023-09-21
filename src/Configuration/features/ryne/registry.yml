@@ -44,3 +44,4 @@ features:
 - features\ryne\registry\restore-windows-photo-viewer-all-users.yml
 - features\ryne\registry\ryne-static-edition.yml
 - features\ryne\registry\ryne-static-oem-information.yml
+- features\ryne\registry\re-enable-update-page.yml
