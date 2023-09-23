@@ -9,5 +9,4 @@ https://ryneos.me
 5. Follow the on screen directions to prepare your system and install Ryne
 
 ## Projects Used
-[Revision OS](https://github.com/meetrevision)
-- This Project Was forked from Revision OS
+[Revision OS](https://github.com/meetrevision) - This Project Was forked from Revision OS
