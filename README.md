@@ -1,7 +1,7 @@
 # Ryne Website
 https://ryneos.me
 
-## How to Install
+# How to Install
 1. Download AME Wizard from [here](https://ameliorated.io)
 2. Download the Ryne Playbook from the [releases](https://github.com/Ryne-os/Ryne/releases)
 3. Extract and open the AME Wizard
